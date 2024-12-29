@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="350dp"
+    android:layout_height="250dp"
+    android:layout_marginEnd="24dp">
+
+    <!-- ShimmerFrameLayout untuk shimmer efek -->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:shimmer_auto_start="true"
+        app:shimmer_duration="1500">
+
+        <!-- CardView untuk memberikan corner radius -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="16dp">
+
+            <!-- FrameLayout untuk mengatur lapisan gambar dan gradient -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- View shimmer untuk gambar -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/shimmer_purple" />
+
+                <!-- Gradient overlay -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_overlay" />
+
+                <!-- Konten shimmer di atas gradient -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Judul berita shimmer -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/shimmer_purple" />
+
+                    <!-- Informasi tambahan shimmer -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:background="@color/shimmer_purple" />
+
+                        <View
+                            android:layout_width="100dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="4dp"
+                            android:background="@color/shimmer_purple" />
+                    </LinearLayout>
+
+                    <!-- Tanggal berita shimmer -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginEnd="4dp"
+                            android:background="@color/shimmer_purple" />
+
+                        <View
+                            android:layout_width="100dp"
+                            android:layout_height="20dp"
+                            android:background="@color/shimmer_purple" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</FrameLayout>

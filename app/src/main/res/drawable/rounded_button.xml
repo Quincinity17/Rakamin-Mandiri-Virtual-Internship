@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/black" /> <!-- Warna latar belakang tombol -->
+    <corners android:radius="32dp" /> <!-- Radius sudut untuk membuat tombol rounded -->
+    <padding
+        android:top="0dp"
+        android:bottom="0dp"
+        android:left="16dp"
+        android:right="16dp" /> <!-- Opsional: padding di dalam tombol -->
+</shape>

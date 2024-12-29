@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Warna semi-transparan hitam -->
+    <solid android:color="#80000000" /> <!-- Hitam transparan (80% alpha) -->
+    <!-- Membuat sudut berbentuk lingkaran -->
+    <corners android:radius="50dp" /> <!-- Radius besar untuk bentuk lingkaran -->
+</shape>

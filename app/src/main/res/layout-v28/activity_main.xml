@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white"
+    tools:context=".ui.activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="top"
+        android:padding="8dp">
+
+        <!-- Breaking News Section -->
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="100dp"
+            android:layout_height="53dp"
+            android:paddingStart="12dp"
+            android:screenReaderFocusable="false"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/logo" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:screenReaderFocusable="false"
+            android:orientation="horizontal"
+            android:paddingTop="6dp"
+            android:paddingBottom="12dp"
+            android:paddingHorizontal="8dp"
+            android:layout_marginTop="0dp"
+            tools:targetApi="p">
+
+            <TextView
+                android:id="@+id/breakingNewsSect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:importantForAccessibility="yes"
+                android:screenReaderFocusable="true"
+                android:text="Breaking News"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+
+
+        </LinearLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerTopNews"
+            android:screenReaderFocusable="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shimmer_duration="1000"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <include layout = "@layout/shimmer_topnews"/>
+                <include layout = "@layout/shimmer_topnews"/>
+                <include layout = "@layout/shimmer_topnews"/>
+                <include layout = "@layout/shimmer_topnews"/>
+                <include layout = "@layout/shimmer_topnews"/>
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listTopNews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:importantForAccessibility="no"
+            android:screenReaderFocusable="false"
+            />
+
+
+        <!-- Recommendation Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="18sp"
+            android:paddingBottom="12dp"
+            android:paddingHorizontal="8dp"
+            android:layout_marginTop="0dp">
+
+            <TextView
+                android:id="@+id/recommendationSect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:screenReaderFocusable="true"
+                android:text="Recommendation"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Button 1 -->
+                    <Button
+                        android:id="@+id/btnTechnology"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/button_purple"
+                        android:text="Technology"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp" />
+
+                    <!-- Button 2 -->
+
+                    <!-- Button 3 -->
+                    <Button
+                        android:id="@+id/btnSports"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/button_grey"
+                        android:text="Sports"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btnHealth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/button_grey"
+                        android:text="Health"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+                    <!-- Button 4 -->
+                    <Button
+                        android:id="@+id/btnFinance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/button_grey"
+                        android:text="Finance"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+                    <!-- Button 4 -->
+                    <Button
+                        android:id="@+id/btnGame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/button_grey"
+                        android:text="Game"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+                    <!-- Add more buttons as needed -->
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerNews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shimmer_duration="1000"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include layout = "@layout/shimmer_news"/>
+                <include layout = "@layout/shimmer_news"/>
+                <include layout = "@layout/shimmer_news"/>
+                <include layout = "@layout/shimmer_news"/>
+                <include layout = "@layout/shimmer_news"/>
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listAllNews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:screenReaderFocusable="false"
+            android:visibility="gone" />
+
+        <!-- Button to Change Query -->
+
+    </LinearLayout>
+</ScrollView>
